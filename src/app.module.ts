@@ -3,6 +3,7 @@ import { TodosModule } from './todos/todos.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TodoSqlModule } from './todo-sql/todo-sql.module';
+import { TodoBuilderModule } from './todo-builder/todo-builder.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { TodoSqlModule } from './todo-sql/todo-sql.module';
     }),
     TodosModule,
     TodoSqlModule,
+    TodoBuilderModule,
   ],
 })
 export class AppModule {}

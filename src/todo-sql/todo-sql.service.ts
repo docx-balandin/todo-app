@@ -57,7 +57,7 @@ export class TodoSqlService {
     const item = todoSql[0];
 
     if (!item) {
-      throw new NotFoundException('Not Found');
+      throw new BadRequestException('Not Found');
     }
 
     return this.todoSqlRepository.manager.query<UpdateResult>(
@@ -74,7 +74,7 @@ export class TodoSqlService {
     const item = todoSql[0];
 
     if (!item) {
-      throw new NotFoundException('Not Found');
+      throw new BadRequestException('Not Found');
     }
 
     return this.todoSqlRepository.manager.query<DeleteResult>(
